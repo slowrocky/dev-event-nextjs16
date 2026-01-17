@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -21,11 +20,14 @@ const EventCard = ({ title, image, slug, location, date, time }: Props) => {
         height={300}
         className="poster"
       />
+
       <div className="flex flex-row gap-2">
         <Image src="/icons/pin.svg" alt="location" width={14} height={14} />
         <p>{location}</p>
       </div>
-      <p className="title">{title} </p>
+
+      <p className="title">{title}</p>
+
       <div className="datetime">
         <div>
           <Image src="/icons/calendar.svg" alt="date" width={14} height={14} />
