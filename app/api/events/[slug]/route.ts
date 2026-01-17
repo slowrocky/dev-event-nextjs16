@@ -11,8 +11,14 @@ type RouteParams = {
 };
 
 /**
- * GET /api/events/[slug]
- * Fetches a single events by its slug
+ * Retrieve a single event by its slug.
+ *
+ * @param params - An object (awaitable) whose resolved value should contain the `slug` string identifying the event.
+ * @returns A NextResponse with a JSON body:
+ * - Success (200): `{ message: "Event fetched successfully", event }` where `event` is the event document.
+ * - Client error (400): `{ message: "Invalid or missing slug parameter" }`.
+ * - Not found (404): `{ message: "Event with slug '<slug>' not found" }`.
+ * - Server error (500): `{ message: string, error?: string }` with an optional `error` detail.
  */
 export async function GET(
   req: NextRequest,

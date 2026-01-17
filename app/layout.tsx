@@ -19,6 +19,12 @@ export const metadata: Metadata = {
   description: "The Hub for Every Dev Event You Mustn't Miss",
 };
 
+/**
+ * Application root layout that applies global fonts, displays the navbar, and renders a decorative LightRays background behind page content.
+ *
+ * @param children - The page content to render inside the layout's main element
+ * @returns The root HTML structure for the application, containing `<html>`, `<body>`, the navbar, a decorative LightRays background layer, and a `<main>` wrapping `children`
+ */
 export default function RootLayout({
   children,
 }: Readonly<{
